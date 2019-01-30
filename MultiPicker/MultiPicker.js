@@ -66,7 +66,8 @@
 			loop(0, targetArr.length, function (i) {
 				tempArr.push({
 					"id": targetArr[i].id,
-					"value": targetArr[i].value
+					"value": targetArr[i].value,
+					"label": targetArr[i].label || targetArr[i].value
 				})
 			});
 			return tempArr;
@@ -84,11 +85,12 @@
 			var nullObj = {
 				id: '-99',
 				value: '',
+				label: ''
 			};
 			arr.unshift(nullObj, nullObj);
 			arr.push(nullObj, nullObj);
 			loop(0, arr.length, function (i) {
-				html += '<li data-id="' + arr[i].id + '">' + arr[i].value + '</li>';
+				html += '<li data-id="' + arr[i].id + '">' + arr[i].label + '</li>';
 			});
 			targetUl.innerHTML = html;
 		},
