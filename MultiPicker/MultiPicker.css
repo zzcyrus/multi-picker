@@ -128,7 +128,7 @@
 }
 
 .multi-picker-content .multi-picker-down-shadow {
-    bottom: -200px;
+    bottom: 0;
     z-index: 50;
     background-image: linear-gradient(to top, #FFF, rgba(255, 255, 255, 0));
 }
