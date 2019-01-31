@@ -32,6 +32,7 @@
 		this.container = config.container;
 		this.jsonData  = config.jsonData;
 		this.success   = config.success;
+		this.default   = config.default || [];
 		
 		this.ulCount   = 0;
 		this.ulIdx     = 0;
@@ -55,8 +56,8 @@
 		};
 		this.resultArr = [];
 		this.initDomFuc();
-		this.initReady(0, this.jsonData[0]);
 		this.initBinding();
+		this.default.length ? this.setDefault() : this.initReady(0, this.jsonData[0]);
 	}
 	
 	MultiPicker.prototype = {
@@ -298,6 +299,28 @@
 					}
 					break;
 			}
+		},
+		flatData: function (data, obj) {
+			data.map((item, idx) => {
+				item.idx = idx
+				obj[item.id] = item;
+				if (item.child && item.child.length) {
+					this.flatData(item.child, obj)
+				}
+			})
+		},
+		setDefault: function() {
+			var that = this;
+			var flatData = {};
+			this.flatData(this.jsonData, flatData);
+			this.default.map(function(item, key) {
+				that.initReady(key, flatData[item]);
+				var $picker = $id('multi-picker-' + that.container + '-' + key);
+				var height = flatData[item].idx * 40;
+				that.distance[key] = height;
+				$picker.style.transform        = 'translate3d(0,-' + height + 'px, 0)';
+				$picker.style.webkitTransform  = 'translate3d(0,-' + height + 'px, 0)';
+			})
 		}
 	};
 	if (typeof exports == "object") {

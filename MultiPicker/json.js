@@ -9,13 +9,13 @@ var $data = [{
 			"id": "002",
 			"value": "西城区",//【3级联动:北京市 > 西城区 > aaa街道】
 			"child": [{
-				"id": "a",
+				"id": "002-a",
 				"value": "aaa街道"
 			}, {
-				"id": "b",
+				"id": "002-b",
 				"value": "bbb街道"
 			}, {
-				"id": "c",
+				"id": "002-c",
 				"value": "ccc街道"
 			}]
 		}]
@@ -68,38 +68,26 @@ var $data = [{
 					"id": "b1",
 					"value": "鼓楼区",
 					"child": [{
-						"id": "a",
+						"id": "b1-a",
 						"value": "a道"
 					}, {
-						"id": "b",
+						"id": "b1-b",
 						"value": "b道"
 					}, {
-						"id": "c",
+						"id": "b1-c",
 						"value": "c道"
 					}, {
-						"id": "d",
+						"id": "b1-d",
 						"value": "d道"
 					}, {
-						"id": "e",
+						"id": "b1-e",
 						"value": "e道"
 					}, {
-						"id": "f",
+						"id": "b1-f",
 						"value": "f道"
 					}, {
-						"id": "g",
+						"id": "b1-g",
 						"value": "g道"
-					}, {
-						"id": "h",
-						"value": "h道"
-					}, {
-						"id": "i",
-						"value": "i道"
-					}, {
-						"id": "j",
-						"value": "j道"
-					}, {
-						"id": "k",
-						"value": "k道"
 					}]
 				}]
 		},
@@ -110,7 +98,7 @@ var $data = [{
 					"id": "2a",
 					"value": "集美区",//【5级联动:福建省 > 厦门市 > 集美区 > aaa街道 > a1街道】
 					"child": [{
-						"id": "a",
+						"id": "2a-a",
 						"value": "aaa街道",
 						"child": [{
 							"id": "aaa-1",
@@ -182,44 +170,29 @@ var $data = [{
 						"id": "2b",
 						"value": "湖里区",
 						"child": [{
-							"id": "a",
+							"id": "2b-a",
 							"value": "aaa街道"
 						}, {
-							"id": "b",
+							"id": "2b-b",
 							"value": "bbb街道"
 						}, {
-							"id": "c",
+							"id": "2b-c",
 							"value": "ccc街道"
 						}, {
-							"id": "d",
+							"id": "2b-d",
 							"value": "ddd街道"
 						}, {
-							"id": "e",
+							"id": "2b-e",
 							"value": "eee街道"
 						}, {
-							"id": "f",
+							"id": "2b-f",
 							"value": "fff街道"
 						}, {
-							"id": "g",
+							"id": "2b-g",
 							"value": "ggg街道"
 						}, {
-							"id": "h",
+							"id": "2b-h",
 							"value": "hhh街道"
-						}, {
-							"id": "i",
-							"value": "iii街道"
-						}, {
-							"id": "j",
-							"value": "jjj街道"
-						}, {
-							"id": "k",
-							"value": "kkk街道"
-						}, {
-							"id": "l",
-							"value": "lll街道"
-						}, {
-							"id": "m",
-							"value": "mmm街道"
 						}]
 					},
 					{
@@ -230,13 +203,13 @@ var $data = [{
 						"id": "2d",
 						"value": "同安区",
 						"child": [{
-							"id": "a",
+							"id": "2d-a",
 							"value": "aaa街道"
 						}, {
-							"id": "b",
+							"id": "2d-b",
 							"value": "bbb街道"
 						}, {
-							"id": "c",
+							"id": "2d-c",
 							"value": "ccc街道"
 						}]
 					}]
